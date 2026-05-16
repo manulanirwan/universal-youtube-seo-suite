@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal YouTube Video SEO Package Suite</title>
+    <!-- Bootstrap 5 CSS Framework -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Vector Graphics Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Reset Blogger Element Layout Packaging Restraints */
+        #content-wrapper, .main, .post, .entry-content, .post-body { 
+            max-width: 100% !important; 
+            padding: 0 !important; 
+            margin: 0 !important; 
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f1f5f9;
+            color: #0f172a;
+        }
+
+        /* App Structural Containers */
+        .app-header {
+            background: linear-gradient(135deg, #0f172a 0%, #0284c7 100%);
+            color: #ffffff;
+            padding: 40px 20px;
+            border-bottom: 4px solid #0284c7;
+        }
+
+        .workspace-container {
+            max-width: 1140px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .seo-panel-card {
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+            overflow: hidden;
+        }
+
+        .panel-header {
+            background-color: #f8fafc;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 15px 20px;
+            font-weight: 600;
+            color: #0369a1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .panel-body {
+            padding: 20px;
+        }
+
+        .output-box {
+            background-color: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            padding: 15px;
+            font-family: inherit;
+            font-size: 0.92rem;
+            white-space: pre-wrap;
+            position: relative;
+            max-height: 320px;
+            overflow-y: auto;
+        }
+
+        .badge-tag {
+            background-color: #f0fdf4;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin: 4px;
+            font-weight: 500;
+        }
+
+        /* Utilities */
+        .hidden-element { display: none !important; }
+    </style>
+</head>
+<body>
+
+    <!-- Header Block -->
+    <div class="app-header text-center">
+        <h1 class="fw-bold"><i class="fab fa-youtube text-danger me-2"></i>YouTube Video SEO Suite</h1>
+        <p class="m-0 text-white-50">Generate professional titles, description models, tags, and custom AI image prompts instantly.</p>
+    </div>
+
+    <!-- Main Working Framework Area -->
+    <div class="workspace-container">
+        
+        <!-- Input Parameter Controller Card -->
+        <div class="card seo-panel-card border-primary">
+            <div class="panel-header bg-dark text-white">
+                <span><i class="fas fa-sliders-h me-2"></i>Configuration Dashboard</span>
+            </div>
+            <div class="panel-body">
+                <div class="row g-3">
+                    <!-- Global Channel Customizations -->
+                    <div class="col-md-4">
+                        <label class="form-label small fw-semibold">Channel Name</label>
+                        <input type="text" id="cfg-channel-name" class="form-control form-control-sm" placeholder="e.g., Creator Tech Lab">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label small fw-semibold">Channel URL / Link</label>
+                        <input type="text" id="cfg-channel-url" class="form-control form-control-sm" placeholder="e.g., https://youtube.com/@username">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label small fw-semibold">Region/Language Keywords</label>
+                        <input type="text" id="cfg-lang-tags" class="form-control form-control-sm" placeholder="e.g., tech, tutorial, english">
+                    </div>
+                    
+                    <hr class="my-2 text-muted">
+
+                    <!-- Target Content Entry -->
+                    <div class="col-md-9">
+                        <label class="form-label fw-bold text-primary">Enter Video Topic / Core Keyword Idea:</label>
+                        <input type="text" id="input-topic" class="form-control form-control-lg" placeholder="e.g., How to Install MySQL on WampServer Step by Step">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label d-none d-md-block">&nbsp;</label>
+                        <button class="btn btn-primary btn-lg w-100 fw-semibold" onclick="generateSeoPackage()">
+                            <i class="fas fa-cog me-2"></i>Build Package
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- OUTPUT SECTIONS BOARD WRAPPER -->
+        <div id="seo-output-board" class="hidden-element">
+
+            <!-- 1. Optimized Video Title Variants -->
+            <div class="seo-panel-card">
+                <div class="panel-header">
+                    <span><i class="fas fa-heading me-2 text-danger"></i>1. SEO-Optimized Video Titles</span>
+                </div>
+                <div class="panel-body">
+                    <p class="text-muted small mb-3">Copy high-CTR dynamic structural templates tailored to your subject keyword:</p>
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <div class="input-group">
+                                <span class="input-group-text bg-light small fw-medium" style="width: 110px;">How-To Focus</span>
+                                <input type="text" id="title-opt-1" class="form-control bg-white" readonly>
+                                <button class="btn btn-outline-secondary" onclick="copyValueFromId('title-opt-1')"><i class="fas fa-copy"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="input-group">
+                                <span class="input-group-text bg-light small fw-medium" style="width: 110px;">Problem-Fix</span>
+                                <input type="text" id="title-opt-2" class="form-control bg-white" readonly>
+                                <button class="btn btn-outline-secondary" onclick="copyValueFromId('title-opt-2')"><i class="fas fa-copy"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="input-group">
+                                <span class="input-group-text bg-light small fw-medium" style="width: 110px;">List/Hook</span>
+                                <input type="text" id="title-opt-3" class="form-control bg-white" readonly>
+                                <button class="btn btn-outline-secondary" onclick="copyValueFromId('title-opt-3')"><i class="fas fa-copy"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Master Algorithmic Description Copy Block -->
+            <div class="seo-panel-card">
+                <div class="panel-header">
+                    <span><i class="fas fa-align-left me-2 text-primary"></i>2. Structured Description Template</span>
+                    <button class="btn btn-sm btn-outline-primary" onclick="copyDivContentContent('output-description')"><i class="fas fa-copy me-1"></i>Copy Content</button>
+                </div>
+                <div class="panel-body">
+                    <div id="output-description" class="output-box"></div>
+                </div>
+            </div>
+
+            <!-- 3. High Ranking Keywords Tags Board -->
+            <div class="seo-panel-card">
+                <div class="panel-header">
+                    <span><i class="fas fa-tags me-2 text-warning text-dark"></i>3. Search Meta Tags</span>
+                    <button class="btn btn-sm btn-outline-dark" onclick="copyTagsToClipboard()"><i class="fas fa-copy me-1"></i>Copy Tags String</button>
+                </div>
+                <div class="panel-body">
+                    <div class="mb-3">
+                        <span class="text-muted small fw-medium">Character Volume Payload:</span> 
+                        <span id="tag-char-counter" class="badge bg-secondary">0 / 500 Characters</span>
+                    </div>
+                    <div id="output-tags-cloud" class="p-2 border rounded bg-light"></div>
+                </div>
+            </div>
+
+            <!-- 4. Text-to-Image AI Prompt Engineering Blueprint Specifications -->
+            <div class="seo-panel-card">
+                <div class="panel-header">
+                    <span><i class="fas fa-image me-2 text-success"></i>4. AI Thumbnail Prompt Generation Framework</span>
+                    <button class="btn btn-sm btn-outline-success" onclick="copyDivContentContent('output-thumbnail-prompt')"><i class="fas fa-copy me-1"></i>Copy AI Prompt</button>
+                </div>
+                <div class="panel-body">
+                    <div class="row g-3">
+                        <div class="col-md-7">
+                            <label class="form-label small fw-bold text-success">AI Image Generator Text Prompt:</label>
+                            <div id="output-thumbnail-prompt" class="output-box bg-light"></div>
+                        </div>
+                        <div class="col-md-5">
+                            <label class="form-label small fw-bold text-dark">File-Level Optimization Mapping:</label>
+                            <div class="table-responsive">
+                                <table class="table table-sm table-bordered small m-0">
+                                    <thead class="table-light"><tr><th>Parameter Asset</th><th>Optimized Targeting Output</th></tr></thead>
+                                    <tbody>
+                                        <tr><td>Aspect Dimensions</td><td>16:9 Landscape (1280 × 720 px)</td></tr>
+                                        <tr><td>SEO File Name</td><td id="meta-filename-target" class="text-success fw-semibold"></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Script Application Matrix -->
+    <script>
+        let generatedTagsArray = [];
+
+        function cleanStringForSEO(str) {
+            return str.toLowerCase()
+                .replace(/[^a-z0-9\s-]/g, '')
+                .replace(/\s+/g, '-')
+                .replace(/-+/g, '-');
+        }
+
+        function generateSeoPackage() {
+            const topic = document.getElementById('input-topic').value.trim();
+            if (!topic) {
+                alert("Please input a topic/keyword parameter string.");
+                return;
+            }
+
+            // Extract dynamic context settings variables with fallbacks
+            const chName = document.getElementById('cfg-channel-name').value.trim() || "Your Channel Name";
+            const chUrl = document.getElementById('cfg-channel-url').value.trim() || "https://www.youtube.com/@YourChannel";
+            const langKeywords = document.getElementById('cfg-lang-tags').value.trim() || "tech, tutorial, tips";
+            const seoSlug = cleanStringForSEO(topic);
+
+            // 1. Dynamic Titles Mapping Pipeline
+            document.getElementById('title-opt-1').value = `${topic} | Step-by-Step Guide 🚀`;
+            document.getElementById('title-opt-2').value = `${topic}? Fix This Instantly! 💡`;
+            document.getElementById('title-opt-3').value = `Don't Miss This: Ultimate ${topic} Tutorial`;
+
+            // 2. Structural Description Blueprint Compilation 
+            const descriptionBlockText = `⚡ Welcome to ${chName}!
+
+In this video, we cover everything you need to know about "${topic}". This comprehensive tutorial guide breaks down each step clearly so you can implement it with ease.
+
+🔥 Video Timeline Chapters:
+00:00 - Introduction & Setup Overview
+01:15 - Required Prerequisites Configuration
+03:00 - Detailed Step-by-Step Implementation
+06:45 - Essential Performance Adjustments & Common Errors Fix
+09:15 - Final Summary & Important Takeaways
+
+📌 Subscribe to the channel for more useful guides and updates:
+👉 ${chUrl}
+
+👍 If you found this content helpful, please leave a LIKE, drop a COMMENT, and SHARE the video!
+
+🔎 Search Keywords Covered:
+${topic.toLowerCase()}, ${langKeywords}, how to, educational walkthrough, technology setup guide`;
+
+            document.getElementById('output-description').innerText = descriptionBlockText;
+
+            // 3. Automated Video Tags Core Logic Matrix (Strictly cap below 500 characters)
+            let baseKeywordsRaw = [
+                "tutorial", "how to", "guide", "step by step", "tips", "tricks", "walkthrough", "course"
+            ];
+            
+            // Clean custom parameter keywords inputs
+            langKeywords.split(',').forEach(k => {
+                if(k.trim()) baseKeywordsRaw.push(k.trim().toLowerCase());
+            });
+
+            // Splice keyword structures to form relevant query strings
+            let baseTags = [];
+            baseTags.push(topic.toLowerCase());
+            baseTags.push(chName.toLowerCase());
+            
+            const words = topic.toLowerCase().split(' ');
+            if(words.length > 2) {
+                baseTags.push(`${words[0]} ${words[1]} ${words[2]}`);
+                baseTags.push(`${words[0]} ${words[1]}`);
+            }
+
+            baseKeywordsRaw.forEach(kw => {
+                if(words.length > 1) {
+                    baseTags.push(`${words[0]} ${kw}`);
+                    baseTags.push(`${topic.toLowerCase()} ${kw}`);
+                }
+            });
+
+            // Compile tag badges and compute array string length boundaries
+            generatedTagsArray = [];
+            let characterAccumulator = 0;
+            const cloudContainer = document.getElementById('output-tags-cloud');
+            cloudContainer.innerHTML = "";
+
+            for(let i = 0; i < baseTags.length; i++) {
+                let currentTag = baseTags[i];
+                // Check safety margin constraints for YouTube forms metadata parameters
+                if ((characterAccumulator + currentTag.length + 2) <= 490) {
+                    generatedTagsArray.push(currentTag);
+                    characterAccumulator += currentTag.length + 2;
+
+                    const tagSpan = document.createElement('span');
+                    tagSpan.className = "badge-tag";
+                    tagSpan.innerText = currentTag;
+                    cloudContainer.appendChild(tagSpan);
+                } else {
+                    break;
+                }
+            }
+            document.getElementById('tag-char-counter').innerText = `${characterAccumulator} / 500 Characters`;
+
+            // 4. Client AI Prompt Matrix Ingestion Layout Generation
+            const aiPromptText = `A professional high-click-through-rate YouTube thumbnail illustration for a modern technology tutorial video titled: "${topic}". 
+The overall design utilizes a clean tech environment background with glowing servers, virtual network connectivity nodes, and sharp neon graphic accent layers. 
+Features bold, contrasting, highly readable display typography centered on screen to ensure maximum clarity on mobile phone views. 
+The aesthetic uses modern, vivid gradients with crisp vector asset layers, dramatic shadows, sharp focus detailing, and an ultra-high-resolution composition setup.`;
+
+            document.getElementById('output-thumbnail-prompt').innerText = aiPromptText;
+            document.getElementById('meta-filename-target').innerText = `${seoSlug}-thumbnail.jpg`;
+
+            // Mount Visibility Actions across layouts
+            document.getElementById('seo-output-board').classList.remove('hidden-element');
+            document.getElementById('seo-output-board').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Clipboards Engine Operations
+        function copyValueFromId(elementId) {
+            const el = document.getElementById(elementId);
+            navigator.clipboard.writeText(el.value);
+            alert("Title copied successfully!");
+        }
+
+        function copyDivContentContent(elementId) {
+            const txt = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(txt);
+            alert("Text block data copied to clipboard!");
+        }
+
+        function copyTagsToClipboard() {
+            if(generatedTagsArray.length === 0) return;
+            const tagsString = generatedTagsArray.join(', ');
+            navigator.clipboard.writeText(tagsString);
+            alert("Tags string array ready for deployment paste actions!");
+        }
+    </script>
+</body>
+</html>
